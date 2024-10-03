@@ -1,0 +1,15 @@
+services:
+  jupyter:
+    mem_limit: 1gb
+    memswap_limit: 2gb
+    restart: always
+    build:
+      context: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    command: start-notebook.py --NotebookApp.token='my-token'
+
+volumes:
+  notebooks:
