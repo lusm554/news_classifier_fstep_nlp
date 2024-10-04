@@ -1,6 +1,6 @@
 services:
   jupyter:
-    mem_limit: 1gb
+    mem_limit: 2gb
     memswap_limit: 2gb
     restart: always
     build:
